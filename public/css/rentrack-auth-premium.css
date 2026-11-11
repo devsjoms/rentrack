@@ -1,0 +1,57 @@
+* { box-sizing:border-box; }
+body.rt-auth-page { min-height:100dvh; margin:0; background:#f8faf7; color:#1b382a; font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; -webkit-font-smoothing:antialiased; }
+.ra-wrap { display:grid; grid-template-columns:minmax(0,1fr) minmax(470px,.92fr); min-height:100dvh; }
+.ra-story { display:flex; flex-direction:column; min-height:100dvh; background:radial-gradient(circle at 75% 25%,#28674e 0,transparent 43%),linear-gradient(145deg,#193e30,#102b23); color:#fff; padding:48px clamp(34px,6vw,100px); position:relative; overflow:hidden; }
+.ra-story-brand,.ra-mobile-brand { display:inline-flex; align-items:center; gap:10px; width:max-content; text-decoration:none; color:#f5fff5; position:relative; z-index:2; }
+.ra-brand-symbol { width:42px; height:42px; border-radius:12px; display:grid; place-items:center; background:#bdf5cc; color:#19513a; font-size:24px; font-weight:820; letter-spacing:-.08em; }
+.ra-story-brand strong,.ra-mobile-brand strong { font-size:25px; letter-spacing:-.065em; line-height:1; }
+.ra-story-brand strong span,.ra-mobile-brand strong span { color:#9ce7b4; }
+.ra-story-content { margin:auto 0; position:relative; z-index:2; padding:40px 0 50px; max-width:600px; }
+.ra-story-kicker { font-size:10px; letter-spacing:.17em; font-weight:850; display:flex; align-items:center; gap:10px; color:#b9ecd0; margin:0 0 25px; }
+.ra-story-kicker span { width:7px; height:7px; background:#9bf6bd; box-shadow:0 0 0 4px #8af5b21d; border-radius:50%; }
+.ra-story h2 { font-size:clamp(45px,4.5vw,72px); line-height:1.08; letter-spacing:-.075em; font-weight:770; margin:0; }
+.ra-story h2 span { color:#b1efc3; }
+.ra-story-content>p:not(.ra-story-kicker) { font-size:15px; line-height:1.85; max-width:405px; margin:24px 0 38px; color:#b4cfbf; }
+.ra-story-features { display:grid; gap:17px; }
+.ra-story-features span { color:#c8e4ce; font-size:12px; font-weight:600; }
+.ra-story-footer { color:#719b7e; font-size:10px; position:relative; z-index:2; }
+.ra-story-orbit { position:absolute; border-radius:50%; border:1px solid rgba(207,255,220,.11); width:600px; height:600px; pointer-events:none; }
+.ra-story-orbit.orbit-one { top:-330px; right:-330px; }
+.ra-story-orbit.orbit-two { bottom:-490px; left:-250px; width:750px; height:750px; }
+.ra-main { min-width:0; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:45px 25px 20px; }
+.ra-card { background:#fff; width:min(100%,488px); padding:44px 44px 36px; border:1px solid #edf1e9; box-shadow:0 22px 70px rgba(20,49,31,.035); border-radius:22px; }
+.ra-mobile-brand { display:none; }
+.ra-card-mark { width:46px; height:46px; display:grid; place-items:center; background:#e5f7e9; color:#2b845b; border-radius:13px; margin-bottom:24px; }
+.ra-card .rt-eyebrow { margin:0 0 9px; color:#2e8b60; font-size:10px; font-weight:820; letter-spacing:.15em; }
+.ra-card h1 { font-size:clamp(27px,2.4vw,33px); line-height:1.2; letter-spacing:-.053em; font-weight:780; color:#1c402f; margin:0 0 11px; }
+.ra-card .ra-desc { font-size:13px; line-height:1.85; color:#84958b; margin:0 0 29px; }
+.ra-card form { width:100%; }
+.ra-card .rt-field { display:grid; gap:8px; margin-bottom:17px; }
+.ra-card .rt-field label { font-size:12px; font-weight:750; color:#34523f; }
+.ra-card .rt-field small { font-size:11px; color:#869b8b; line-height:1.5; }
+.ra-card input,.ra-card select,.ra-card textarea { display:block; width:100%; min-height:47px; border-radius:10px; background:#fcfefd; border:1px solid #dfeae2; padding:12px 13px; color:#274b34; font-size:13px; }
+.ra-card input::placeholder { color:#9fb0a3; }
+.ra-card input:focus,.ra-card select:focus,.ra-card textarea:focus { outline:none; border-color:#52b787; box-shadow:0 0 0 4px rgba(62,183,118,.10); }
+.ra-card .rt-btn { width:100%; display:inline-flex; align-items:center; justify-content:center; min-height:47px; border:0; padding:12px 17px; border-radius:10px; margin-top:8px; background:#185d45; color:white; font-size:13px; font-weight:760; cursor:pointer; transition:background .2s; }
+.ra-card .rt-btn:hover { background:#227652; }
+.ra-card .rt-btn:disabled { opacity:.65; }
+.ra-bottom { display:flex; align-items:center; justify-content:space-between; gap:15px; margin-top:24px; font-size:12px; font-weight:680; }
+.ra-card a { color:#25714e; text-decoration:none; }
+.ra-card a:hover { text-decoration:underline; }
+.ra-home { margin:25px 0 0; text-align:center; font-size:11px; }
+.ra-home a { color:#9aaba0; }
+.ra-main-footer { font-size:10px; color:#9bad9f; margin:27px 0 0; text-align:center; }
+.ra-secondary-form { margin-top:11px; }
+.ra-code { text-align:center; letter-spacing:8px; font-weight:800; font-size:23px!important; }
+.ra-notice { display:grid; gap:5px; background:#edfaf0; border:1px solid #d7efe0; color:#25724a; border-radius:10px; padding:12px 15px; margin-bottom:23px; font-size:12px; overflow-wrap:anywhere; }
+.ra-notice strong { font-size:9px; letter-spacing:.11em; text-transform:uppercase; }
+.ra-form-heading { font-size:14px; letter-spacing:-.02em; color:#244834; margin:24px 0 16px; }
+.ra-two-column { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:13px; }
+.ra-error-code { font-size:58px!important; color:#ba3a45!important; }
+.ra-card .rt-alert { margin-bottom:20px; padding:12px 14px; font-size:12px; line-height:1.55; }
+.ra-card .rt-alert ul { padding-left:16px; }
+.ra-card input:focus-visible,.ra-card select:focus-visible,.ra-card a:focus-visible,.ra-card button:focus-visible { outline:2px solid #4bc587; outline-offset:3px; }
+@media(max-width:1000px) { .ra-wrap{grid-template-columns:1fr 1fr;} .ra-story{padding:40px 35px;} .ra-main{padding:35px 20px;} .ra-card{padding:34px 30px;} }
+@media(max-width:760px) { .ra-wrap{display:block;} .ra-story{display:none;} .ra-main{min-height:100dvh;padding:25px 17px;} .ra-card{box-shadow:0 18px 55px rgba(20,49,31,.045);padding:31px 27px;} .ra-mobile-brand{display:inline-flex;margin-bottom:32px;color:#174a33;} .ra-mobile-brand strong span{color:#228b58;} .ra-brand-symbol{width:35px;height:35px;font-size:21px;} .ra-mobile-brand strong{font-size:22px;} }
+@media(max-width:440px) { .ra-main{padding:0 0 15px;} .ra-card{border:0;box-shadow:none;border-radius:0;min-height:calc(100dvh - 42px);padding:32px 23px;} .ra-main-footer{padding:0 15px;margin:10px 0;} .ra-two-column{grid-template-columns:1fr;} .ra-bottom{flex-wrap:wrap;gap:12px;} }
+@media(prefers-reduced-motion:reduce) { *{transition:none!important;} }

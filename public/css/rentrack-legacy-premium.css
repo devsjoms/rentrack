@@ -1,0 +1,62 @@
+/* Modern theme for legacy standalone Billing, Registration, and Payment screens.
+   Keeps existing forms, scripts, validation, routes, and business rules intact. */
+:root { --rl-ink:#1e382b; --rl-primary:#1b7856; --rl-muted:#7e9183; --rl-bg:#f7f9f7; --rl-line:#e2ece3; }
+body.rt-legacy-page { background:var(--rl-bg)!important; font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif!important; color:var(--rl-ink)!important; padding:0!important; margin:0!important; max-width:none!important; line-height:1.6; -webkit-font-smoothing:antialiased; }
+.rt-legacy-nav { min-height:75px; background:#142b23; display:flex; align-items:center; gap:22px; padding:0 max(24px,calc((100vw - 1280px)/2)); color:#e5f5e9; position:relative; z-index:10; }
+.rt-legacy-logo { display:flex; align-items:center; gap:8px; text-decoration:none!important; color:#fff!important; flex:none; }
+.rt-legacy-logo>span { display:grid; place-items:center; border-radius:10px; width:35px; height:35px; background:#b9f5ce; color:#175335; font-weight:850; font-size:20px; }
+.rt-legacy-logo strong { font-size:19px; letter-spacing:-.06em; }
+.rt-legacy-logo b { color:#a8ecc0; }
+.rt-legacy-logo small { color:#7f9f8d; font-size:8px; font-weight:800; letter-spacing:.13em; margin-left:12px; }
+.rt-legacy-links { display:flex; flex-wrap:wrap; align-items:center; gap:3px; margin:0 auto; }
+.rt-legacy-links a { text-decoration:none!important; color:#a8c4b0!important; border-radius:8px; padding:9px 12px; font-size:11px; font-weight:660; transition:background .2s,color .2s; }
+.rt-legacy-links a:hover { background:#294638; color:#fff!important; }
+.rt-legacy-links a.current { color:#143f2d!important; background:#b9f5ce!important; }
+.rt-legacy-back { text-decoration:none!important; white-space:nowrap; color:#eaf7ec!important; font-size:11px; font-weight:720; border:1px solid #406651; border-radius:9px; padding:9px 11px; }
+.rt-legacy-menu { display:none; position:relative; }
+.rt-legacy-page>.container { width:min(100% - 48px,1180px)!important; max-width:1180px!important; margin:34px auto 65px!important; padding:0!important; }
+.rt-legacy-page h1 { color:#193e2b!important; font-size:clamp(25px,3vw,36px)!important; letter-spacing:-.055em!important; margin-top:0; margin-bottom:9px; }
+.rt-legacy-page h2 { color:#2d4d37; font-size:clamp(18px,2vw,23px); letter-spacing:-.03em; }
+.rt-legacy-page .header { padding:0 0 20px!important; margin:0 0 21px!important; background:transparent!important; border-bottom:1px solid #e4ebe4; gap:18px; }
+.rt-legacy-page .header h1 { font-size:11px!important; letter-spacing:.15em!important; color:#218157!important; text-transform:uppercase; margin:0 0 6px; }
+.rt-legacy-page .header h2 { color:#1b3f2c!important; font-size:clamp(26px,3vw,34px)!important; letter-spacing:-.05em; margin:0; }
+.rt-legacy-page .header a { color:#276948!important; font-size:12px; font-weight:720; }
+.rt-legacy-page .card,.rt-legacy-page .category-card,.rt-legacy-page .tile,.rt-legacy-page .table-container { background:#fff!important; border:1px solid #e5ede5!important; box-shadow:0 10px 30px rgba(23,53,28,.045); border-radius:17px!important; }
+.rt-legacy-page .card { padding:26px!important; margin:21px 0!important; }
+.rt-legacy-page .category-card { padding:19px!important; }
+.rt-legacy-page .category-card:has(input[type=checkbox]:checked) { border-color:#54b67e!important; background:#f0fbf2!important; }
+.rt-legacy-page p,.rt-legacy-page .description { color:#7a8d7d; }
+.rt-legacy-page table { width:100%; border-collapse:collapse; background:white; }
+.rt-legacy-page th { background:#f7faf7!important; color:#7c9381!important; font-size:10px!important; letter-spacing:.08em!important; text-transform:uppercase; font-weight:790!important; border-bottom:1px solid #e5eee6; }
+.rt-legacy-page td { color:#3c5440!important; font-size:12px!important; border-bottom:1px solid #ecf1e9!important; }
+.rt-legacy-page th,.rt-legacy-page td { padding:13px 14px!important; }
+.rt-legacy-page tr:hover td { background:#fcfefc; }
+.rt-legacy-page .table-container,.rt-legacy-page .table-wrapper { overflow-x:auto; }
+.rt-legacy-page label { color:#405b45; font-size:12px!important; font-weight:740!important; }
+.rt-legacy-page input:not([type=checkbox]),.rt-legacy-page select,.rt-legacy-page textarea { border:1px solid #dce8de!important; background:#fff!important; color:#243e30!important; border-radius:10px!important; padding:11px 13px!important; font-family:inherit!important; font-size:13px!important; max-width:100%; }
+.rt-legacy-page input:not([type=checkbox]):focus,.rt-legacy-page select:focus,.rt-legacy-page textarea:focus { outline:0!important; border-color:#43b879!important; box-shadow:0 0 0 4px rgba(72,185,113,.11)!important; }
+.rt-legacy-page input[type=checkbox] { accent-color:#218b5f; }
+.rt-legacy-page button,.rt-legacy-page a.button,.rt-legacy-page .btn { background:#1c7652!important; color:#fff!important; border:1px solid #1c7652!important; border-radius:10px!important; font-family:inherit!important; font-size:12px!important; font-weight:740!important; padding:11px 16px!important; cursor:pointer; text-decoration:none!important; }
+.rt-legacy-page button:hover:not(:disabled),.rt-legacy-page a.button:hover { background:#155c40!important; }
+.rt-legacy-page button:disabled { opacity:.6; cursor:not-allowed; }
+.rt-legacy-page .danger,.rt-legacy-page .btn-danger,.rt-legacy-page button[style*="dc2626"] { background:#b84d55!important; border-color:#b84d55!important; }
+.rt-legacy-page a { color:#19764f; text-underline-offset:3px; }
+.rt-legacy-page .alert { padding:14px 16px!important; border-radius:11px!important; font-size:12px; }
+.rt-legacy-page .success { background:#e5f7e8!important; color:#1e7650!important; }
+.rt-legacy-page .error { background:#fff0ee!important; color:#a74149!important; }
+.rt-legacy-page .warning { background:#fff4df!important; color:#a16a28!important; }
+.rt-legacy-page .status,.rt-legacy-page .badge { border-radius:100px!important; font-size:10px!important; font-weight:770!important; }
+.rt-legacy-page .pagination { font-size:12px; color:#738679; }
+.rt-legacy-page .grid { gap:17px; }
+.rt-legacy-page .section-divider { border-color:#e4ece5; }
+.rt-legacy-page button:focus-visible,.rt-legacy-page a:focus-visible { outline:2px solid #48be83; outline-offset:3px; }
+.rt-legacy-page dialog { border:0; border-radius:18px; box-shadow:0 25px 85px #192d2240; }
+.rt-legacy-page dialog button { margin:0; }
+@media(max-width:1190px) { .rt-legacy-links a{padding:8px;} .rt-legacy-nav{padding:0 25px;} .rt-legacy-logo small{display:none;} }
+@media(max-width:900px) { .rt-legacy-links,.rt-legacy-back{display:none;} .rt-legacy-nav{padding:0 22px;justify-content:space-between;} .rt-legacy-menu{display:block;margin-left:auto;} .rt-legacy-menu summary{cursor:pointer;list-style:none;font-size:20px;padding:7px 11px;border:1px solid #426a4e;border-radius:9px;color:white;} .rt-legacy-menu summary::-webkit-details-marker{display:none;} .rt-legacy-menu nav{position:absolute;right:0;top:43px;display:grid;min-width:220px;background:#fff;padding:10px;border:1px solid #dbeadd;box-shadow:0 15px 42px #14261c25;border-radius:12px;z-index:20;} .rt-legacy-menu nav a{padding:10px;color:#265a38!important;text-decoration:none;font-size:12px;font-weight:700;border-radius:8px;} .rt-legacy-menu nav a:hover{background:#e9f6ed;} .rt-legacy-page>.container{width:min(100% - 32px,1180px)!important;margin:25px auto 55px!important;} }
+@media(max-width:600px) { .rt-legacy-nav{min-height:65px;padding:0 16px;} .rt-legacy-page .header{display:grid!important;} .rt-legacy-page .card{padding:19px!important;} .rt-legacy-page .grid,.rt-legacy-page .billing-categories{grid-template-columns:1fr!important;} .rt-legacy-page th,.rt-legacy-page td{padding:10px!important;} .rt-legacy-page .container h1{font-size:27px!important;} .rt-legacy-page .header h1{font-size:10px!important;} .rt-legacy-page .header h2{font-size:27px!important;} }
+@media(prefers-reduced-motion:reduce){*{transition:none!important;}}
+/* Normalize remaining legacy-specific chrome overrides. */
+.rt-legacy-page .rt-legacy-logo,.rt-legacy-page .rt-legacy-logo strong { color:#fff!important; }
+.rt-legacy-page .rt-legacy-back { color:#edf9f0!important; }
+.rt-legacy-page .header { border:0!important; border-bottom:1px solid #e2ebe3!important; border-radius:0!important; }
